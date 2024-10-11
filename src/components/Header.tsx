@@ -16,57 +16,26 @@ import {
     navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Logo from "@/components/Logo";
-
 const components = [
     {
-        title: "Check Blood",
-        href: "/user/blood",
-        description: "Quickly locate available blood supplies and manage your inventory with ease.",
-    },
-    {
-        title: "Check Oxygen Cylinders",
+        title: "Home Lab Tests",
         href: "#",
-        description: "Find and track available oxygen cylinders to ensure timely access.",
+        description: "Get samples collected from home and access lab test results quickly.",
     },
     {
-        title: "Book Appointment",
+        title: "Teleconsultation",
         href: "#",
-        description: "Schedule appointments at hospitals or clinics effortlessly.",
+        description: "Consult with top industry doctors virtually from anywhere.",
     },
     {
-        title: "Check Medicine",
+        title: "Comprehensive Care",
         href: "#",
-        description: "Search for and manage medicine availability and inventory efficiently.",
+        description: "Receive holistic healthcare services customized for your needs.",
     },
     {
-        title: "Check Beds",
-        href: "/user/beds",
-        description: "Find available hospital beds in your area with real-time updates.",
-    },
-    {
-        title: "Share Your Data",
+        title: "Free Eye Consult",
         href: "#",
-        description: "Share your data for research purposes and get exciting rewards or tokens.",
-    },
-    {
-        title: "Ask for Donation",
-        href: "#",
-        description: "Get donations for your needs.",
-    },
-    {
-        title: "Test Availability",
-        href: "#",
-        description: "Find available tests in your area with real-time updates.",
-    },
-    {
-        title: "Availability of Treatments",
-        href: "#",
-        description: "Find available treatments in your area with real-time updates.",
-    },
-    {
-        title: "Find Insurance",
-        href: "#",
-        description: "Find appropriate insurance for you.",
+        description: "Avail free consultations with experienced ophthalmologists.",
     },
 ];
 

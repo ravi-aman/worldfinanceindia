@@ -12,6 +12,7 @@ import {
 } from "@clerk/nextjs";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import Header2 from "@/components/Header2";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,7 @@ if (!clerkKey) {
 }
 
 export const metadata: Metadata = {
-  title: "Amango", 
+  title: "Stock market course", 
   description: "a health care management system", 
   icons: {
     icon: "/favicon.ico",
@@ -49,7 +50,7 @@ export default function RootLayout({
           <div className="flex min-h-screen flex-col bg-white">
             <Analytics />
             <SpeedInsights /> 
-            <Header />
+            <Header2 />
             <main>{children}</main>
             <Footer />
           </div>
