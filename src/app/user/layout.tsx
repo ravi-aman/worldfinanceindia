@@ -11,8 +11,8 @@ import {
   ClerkProvider,
 } from "@clerk/nextjs";
 import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import Header2 from "@/components/Header2";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 

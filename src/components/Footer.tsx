@@ -1,82 +1,91 @@
-"use client";
-import React from "react";
-import { Boxes } from "@/components/ui/background-boxes";
-import { cn } from "@/lib/utils";
+import Link from 'next/link'
+import { Instagram, Facebook, Linkedin, Mail } from 'lucide-react'
 import { FaTwitter, FaLinkedin, FaGithub, FaFacebook, FaInstagram } from "react-icons/fa";
 
-export function Footer() {
+function Footer() {
     return (
-        <footer className="relative w-full bg-slate-900 text-gray-200">
-            <div className="h-96 relative w-full overflow-hidden flex flex-col items-center justify-center rounded-lg">
-                <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
-                <div className="relative z-30 w-full max-w-6xl mx-auto px-6 py-20 flex flex-col md:flex-row justify-between md:my-100">
-                    <div>
-                        <div className="flex flex-col md:flex-row md:space-x-8 mb-6 md:mb-0">
-                            <div className="flex flex-col space-y-4">
-                                <h2 className="text-xl font-semibold text-white mb-4">Navigation</h2>
-                                <nav className="flex flex-col space-y-2">
-                                    <a href="#about" className="hover:text-white">About Us</a>
-                                    <a href="#services" className="hover:text-white">Services</a>
-                                    <a href="#contact" className="hover:text-white">Contact</a>
-                                    <a href="#privacy" className="hover:text-white">Privacy Policy</a>
-                                </nav>
-                            </div>
-                            <div className="flex flex-col space-y-4 mt-6 md:mt-0">
-                                <h2 className="text-xl font-semibold text-white mb-4">Follow Us</h2>
-                                <div className="flex space-x-4">
-                                    <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
-                                        <FaTwitter className="text-2xl" /> Twitter
-                                    </a>
-                                    <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
-                                        <FaLinkedin className="text-2xl" /> LinkedIn
-                                    </a>
-                                    <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
-                                        <FaInstagram className="text-2xl" /> Instagram
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+        <footer className="bg-[#1E1B2E] text-white py-12">
+            <div className="container mx-auto px-4">
+                <div className="flex justify-between items-center mb-12">
+                    <div className="flex items-center">
+                        <svg className="w-10 h-10 mr-2" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 0C8.954 0 0 8.954 0 20s8.954 20 20 20 20-8.954 20-20S31.046 0 20 0zm0 36c-8.837 0-16-7.163-16-16S11.163 4 20 4s16 7.163 16 16-7.163 16-16 16z" fill="url(#paint0_linear)" />
+                            <path d="M20 8C13.373 8 8 13.373 8 20s5.373 12 12 12 12-5.373 12-12S26.627 8 20 8zm0 22c-5.514 0-10-4.486-10-10S14.486 10 20 10s10 4.486 10 10-4.486 10-10 10z" fill="url(#paint1_linear)" />
+                            <defs>
+                                <linearGradient id="paint0_linear" x1="20" y1="0" x2="20" y2="40" gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#7C3AED" />
+                                    <stop offset="1" stopColor="#3B82F6" />
+                                </linearGradient>
+                                <linearGradient id="paint1_linear" x1="20" y1="8" x2="20" y2="32" gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#7C3AED" />
+                                    <stop offset="1" stopColor="#3B82F6" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span className="text-2xl font-bold">WFI</span>
                     </div>
-                    {/* Subscribe to Blog */}
-                    <div className="flex flex-col items-start md:items-end">
-                        <h2 className="text-xl font-semibold text-white mb-4">Subscribe to Our Blog</h2>
-                        <form className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-                            <input
-                                type="email"
-                                placeholder="Enter your email"
-                                className="px-4 py-2 border border-gray-700 rounded-lg bg-gray-800 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                                required
-                            />
-                            <button
-                                type="submit"
-                                className="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition duration-300"
-                            >
-                                Subscribe
-                            </button>
-                        </form>
+                    <div className="flex space-x-4">
+                        <Link href="#" className="text-gray-400 hover:text-white">
+                            <FaInstagram size={24} />
+                        </Link>
+                        <Link href="#" className="text-gray-400 hover:text-white">
+                            <FaFacebook size={24} />
+                        </Link>
+                        <Link href="#" className="text-gray-400 hover:text-white">
+                            <FaLinkedin size={24} />
+                        </Link>
+                        <Link href="#" className="text-gray-400 hover:text-white">
+                            <Mail size={24} />
+                        </Link>
                     </div>
                 </div>
-
-                {/* Footer Copyright */}
-                <div className="w-full flex flex-col sm:flex-row sm:items-center sm:justify-between py-20 px-20">
-                    <span className="text-sm sm:text-center ">© 2023 Your Company. All Rights Reserved.
-                    </span>
-                    <div className="flex mt-4 sm:mt-0 sm:justify-center space-x-5">
-                        <a href="https://facebook.com/yourprofile" className=" ">
-                            <FaFacebook className="text-2xl" />
-                            <span className="sr-only">Facebook</span>
-                        </a>
-                        <a href="https://instagram.com/yourprofile" className="">
-                            <FaInstagram className="text-2xl" />
-                            <span className="sr-only">Instagram</span>
-                        </a>
-                        <a href="https://twitter.com/yourprofile" className="">
-                            <FaTwitter className="text-2xl" />
-                            <span className="sr-only">Twitter</span>
-                        </a>
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                    <div>
+                        <h3 className="text-lg font-semibold mb-4">Services</h3>
+                        <ul className="space-y-2">
+                            <li><Link href="#" className="text-gray-400 hover:text-white">Courses</Link></li>
+                            <li><Link href="#" className="text-gray-400 hover:text-white">Webinar</Link></li>
+                            <li><Link href="#" className="text-gray-400 hover:text-white">Branding</Link></li>
+                            <li><Link href="#" className="text-gray-400 hover:text-white">Personal mentor</Link></li>
+                        </ul>
                     </div>
+                    <div>
+                        <h3 className="text-lg font-semibold mb-4">Links</h3>
+                        <ul className="space-y-2">
+                            <li><Link href="#" className="text-gray-400 hover:text-white">About us</Link></li>
+                            <li><Link href="#" className="text-gray-400 hover:text-white">Blog</Link></li>
+                            <li><Link href="#" className="text-gray-400 hover:text-white">FAQs</Link></li>
+                            <li><Link href="#" className="text-gray-400 hover:text-white">Contact</Link></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 className="text-lg font-semibold mb-4">Contact</h3>
+                        <p className="text-gray-400 mb-2">A-67,vijay Nagar Mohan Garden</p>
+                        <p className="text-gray-400 mb-4">New Delhi, 110059</p>
+                        <p className="text-gray-400 mb-2">+91 8744883594</p>
+                        <p className="text-gray-400">tiwariravikant04@gmail.com</p>
+                    </div>
+                    <div>
+                        <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
+                        <div className="flex">
+                            <input
+                                type="email"
+                                placeholder="Email address"
+                                className="bg-[#2D2A3E] text-white px-4 py-2 rounded-l-md w-full focus:outline-none"
+                            />
+                            <button className="bg-[#7C3AED] text-white px-4 py-2 rounded-r-md hover:bg-[#6D28D9] transition duration-300">
+                                Subscribe
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div className="text-center text-gray-400 text-sm border-t-2 pt-9">
+                    Copyright © 2024 - All Rights Reserved By NesterLink
                 </div>
             </div>
         </footer>
-    );
+    )
 }
+
+
+export default Footer;
