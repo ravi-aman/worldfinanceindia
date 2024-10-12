@@ -80,7 +80,7 @@ function Footer() {
                     </div>
                 </div>
                 <div className="text-center text-gray-400 text-sm border-t-2 pt-9">
-                    Copyright © 2024 - All Rights Reserved By NesterLink
+                    Copyright © 2024 - All Rights Reserved By WFI
                 </div>
             </div>
         </footer>

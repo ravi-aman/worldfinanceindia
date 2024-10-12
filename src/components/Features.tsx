@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
+import TextReveal from "@/components/ui/text-reveal";
 
 export function Features() {
     const cards = data.map((card, index) => (
@@ -24,7 +25,7 @@ export function Features() {
 const DummyContent = () => {
     return (
         <>
-            {[...new Array(3).fill(1)].map((_, index) => (
+            {[...Array(3)].map((_, index) => (
                 <div
                     key={"dummy-content" + index}
                     className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
