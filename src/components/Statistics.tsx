@@ -57,7 +57,7 @@ export const Statistics = () => {
             {/* Title Section */}
             <div className="relative z-10 text-center w-[40%] flex flex-col justify-center items-center">
                 <h1 className="text-white text-3xl md:text-6xl font-bold">
-                    Join us and Let's Start Learning Today and
+                    Join us and Let&#39;s Start Learning Today and
                 </h1>
                 <button className="mt-8 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300">
                     Join Now
