@@ -42,7 +42,7 @@ const config: Config = {
   			},
   			'accordion-down': {
   				from: {
-  					height: '0px'
+  					height: '0'
   				},
   				to: {
   					height: 'var(--radix-accordion-content-height)'
@@ -53,7 +53,7 @@ const config: Config = {
   					height: 'var(--radix-accordion-content-height)'
   				},
   				to: {
-  					height: '0px'
+  					height: '0'
   				}
   			},
   			marquee: {

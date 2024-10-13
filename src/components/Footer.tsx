@@ -4,7 +4,7 @@ import { FaTwitter, FaLinkedin, FaGithub, FaFacebook, FaInstagram } from "react-
 
 function Footer() {
     return (
-        <footer className="bg-[#1E1B2E] text-white py-12">
+        <footer className="bg-blue-800 text-white pt-12">
             <div className="container mx-auto px-4">
                 <div className="flex justify-between items-center mb-12">
                     <div className="flex items-center">
@@ -39,7 +39,7 @@ function Footer() {
                         </Link>
                     </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12 border-t-[1px] pt-12">
                     <div>
                         <h3 className="text-lg font-semibold mb-4">Services</h3>
                         <ul className="space-y-2">
@@ -73,15 +73,16 @@ function Footer() {
                                 placeholder="Email address"
                                 className="bg-[#2D2A3E] text-white px-4 py-2 rounded-l-md w-full focus:outline-none"
                             />
-                            <button className="bg-[#7C3AED] text-white px-4 py-2 rounded-r-md hover:bg-[#6D28D9] transition duration-300">
+                            <button className="bg-[#7C3AED] text-white px-4 py-2 rounded-r-lg hover:bg-[#6D28D9] transition duration-300">
                                 Subscribe
                             </button>
                         </div>
                     </div>
                 </div>
-                <div className="text-center text-gray-400 text-sm border-t-2 pt-9">
-                    Copyright © 2024 - All Rights Reserved By WFI
-                </div>
+
+            </div>
+            <div className="flex justify-center text-center text-gray-400 text-sm  p-9 bg-black w-full">
+                Copyright © 2024 - All Rights Reserved By WFI
             </div>
         </footer>
     )

@@ -24,7 +24,7 @@ export default function RootLayout({
           <link rel="shortcut icon" href="/Rk-white.png" />
         </head>
         <body className={inter.className}>
-          <div className="flex min-h-screen flex-col bg-white">
+          <div className="flex min-h-screen flex-col bg-slate-100">
             <Analytics /> 
             <SpeedInsights />
             <main>{children}</main> 
