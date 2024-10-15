@@ -16,7 +16,7 @@ export const ContactForm = () => {
     return (
         <div>
             <div className="heading flex justify-center items-center flex-col mx-4">
-                <h1 className="text-7xl font-bold mt-20">Have a Question ?</h1>
+                <h1 className="text-5xl md:text-7xl font-bold mt-20">Have a Question ?</h1>
                 <p className="text-xl my-4">We are here to help. Send us your query and our team will get back to you as soon as possible!!</p>
             </div>
             <div id="" className=" container mx-auto flex flex-col lg:flex-row justify-between gap-16 py-20 px-6 lg:px-12">
