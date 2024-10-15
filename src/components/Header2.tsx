@@ -66,7 +66,7 @@ export const Header2 = () => {
                     <FaClock />
                     <p>Mon to Sat: 8.00 am - 7.00 pm</p>
 
-                    <div className="icon flex gap-3 text-white bg-blue-500 px-10 py-3 justify-between gap-5">
+                    <div className="icon flex text-white bg-blue-500 px-10 py-3 justify-between gap-5">
                         <a href="https://www.facebook.com/ravikant.tiwari.547727" target="_blank">
                             <FaFacebookF className="w-50" />
                         </a>
