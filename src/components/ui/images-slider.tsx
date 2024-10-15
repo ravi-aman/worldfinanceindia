@@ -13,7 +13,7 @@ export const ImagesSlider = ({
     direction = "up",
 }: {
     images: string[];
-    children: React.ReactNode; 
+    children: React.ReactNode;
     overlay?: React.ReactNode;
     overlayClassName?: string;
     className?: string;
@@ -58,6 +58,7 @@ export const ImagesSlider = ({
             })
             .catch((error) => console.error("Failed to load images", error));
     };
+    
     useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent) => {
             if (event.key === "ArrowRight") {
@@ -142,7 +143,8 @@ export const ImagesSlider = ({
                         animate="visible"
                         exit={direction === "up" ? "upExit" : "downExit"}
                         variants={slideVariants}
-                        className="image  w-full absolute inset-0 object-cover object-center"
+                        className="image w-full h-full absolute inset-0 object-cover object-center" 
+                        // Add object-cover to ensure the image covers the entire container
                     />
                 </AnimatePresence>
             )}
