@@ -6,7 +6,7 @@ import { TabsDemo } from "@/components/Tab"; // Ensure correct import path
 export const Benefits = () => {
     return (
         <section className="flex flex-col md:flex-row justify-between items-center my-20 w-full max-w-7xl mx-auto px-6 md:px-12 gap-10">
-            {/* Left Section: Title, Subtitle, and Button */}
+            {/* Left Section*/}
             <div className="w-full md:w-1/2 flex flex-col justify-center items-start space-y-6 md:space-y-8">
                 <h1 className="text-3xl md:text-7xl font-bold text-neutral-900">
                     Discover Our Benefits

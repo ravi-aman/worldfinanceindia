@@ -9,16 +9,15 @@ type DummyContentData = {
     };
 };
 
-// JSON structure to hold the dummy content dynamically
 const dummyContentData: DummyContentData = {
     product: {
-        videoSrc: "/media/video1.mp4", // Video for "Hands on session" tab
+        videoSrc: "/media/video1.mp4", 
     },
     services: {
-        videoSrc: "/media/video2.mp4", // Video for "Live Training" tab
+        videoSrc: "/media/video2.mp4", 
     },
     playground: {
-        videoSrc: "/media/video3.mp4", // Video for "Expert Guidance" tab
+        videoSrc: "/media/video3.mp4", 
     },
 };
 
@@ -29,9 +28,9 @@ export function TabsDemo() {
             title: "Hands on session",
             value: "product",
             content: (
-                <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-blue-700 to-blue-900">
-                    <p>Hands-on Session</p>
-                    <h1 className="text-[19px] text-gray-300 mt-5 font-medium">
+                <div className="w-full overflow-hidden relative h-full rounded:1xl md:rounded-2xl p-10 font-bold text-white bg-gradient-to-br from-blue-700 to-blue-900">
+                    <p className="text-[12px] md:text-[12px]">Hands-on Session</p>
+                    <h1 className="text-[12px] md:text-[19px] md:text-gray-300 mt-5 font-medium">
                         Gain practical experience through interactive, real-world projects.
                     </h1>
                     <DummyContent tabValue="product" />
@@ -73,12 +72,10 @@ export function TabsDemo() {
     );
 }
 
-// TypeScript typing for the DummyContent component props
 interface DummyContentProps {
     tabValue: keyof DummyContentData;
 }
 
-// DummyContent component to dynamically load videos based on tab value
 const DummyContent: React.FC<DummyContentProps> = ({ tabValue }) => {
     const videoSrc = dummyContentData[tabValue]?.videoSrc || "";
 
