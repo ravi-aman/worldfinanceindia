@@ -11,13 +11,13 @@ type DummyContentData = {
 
 const dummyContentData: DummyContentData = {
     product: {
-        videoSrc: "/media/video1.mp4", 
+        videoSrc: "/media/video1.mp4",
     },
     services: {
-        videoSrc: "/media/video2.mp4", 
+        videoSrc: "/media/video2.mp4",
     },
     playground: {
-        videoSrc: "/media/video3.mp4", 
+        videoSrc: "/media/video3.mp4",
     },
 };
 
@@ -26,35 +26,35 @@ export function TabsDemo() {
     const tabs = [
         {
             title: "Hands on session",
-            value: "product",
+            value: "session",
             content: (
-                <div className="w-full overflow-hidden relative h-full rounded:1xl md:rounded-2xl p-10 font-bold text-white bg-gradient-to-br from-blue-700 to-blue-900">
-                    <p className="text-[12px] md:text-[12px]">Hands-on Session</p>
-                    <h1 className="text-[12px] md:text-[19px] md:text-gray-300 mt-5 font-medium">
+                <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 font-bold text-white bg-gradient-to-br from-blue-700 to-blue-900">
+                    <p>Hands-on Session</p>
+                    <h1 className="text-[19px] text-gray-300 mt-5 font-medium">
                         Gain practical experience through interactive, real-world projects.
                     </h1>
-                    <DummyContent tabValue="product" />
+                    <DummyContent tabValue="playground" />
                 </div>
             ),
         },
         {
             title: "Live Training",
-            value: "services",
+            value: "playground",
             content: (
-                <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-blue-700 to-blue-900">
+                <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 font-bold text-white bg-gradient-to-br from-blue-700 to-blue-900">
                     <p>Live Training</p>
                     <h1 className="text-[19px] text-gray-300 mt-5 font-medium">
                         Engage in live, expert-led training sessions to enhance your skills.
                     </h1>
-                    <DummyContent tabValue="services" />
+                    <DummyContent tabValue="playground" />
                 </div>
             ),
         },
         {
             title: "Expert Guidance",
-            value: "playground",
+            value: "mentor",
             content: (
-                <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-blue-700 to-blue-900">
+                <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 font-bold text-white bg-gradient-to-br from-blue-700 to-blue-900">
                     <p>Expert Guidance</p>
                     <h1 className="text-[19px] text-gray-300 mt-5 font-medium">
                         Benefit from personalized insights and advice from industry experts.

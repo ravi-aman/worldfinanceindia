@@ -125,7 +125,7 @@ const Testimonials = () => {
     return (
         <div className="w-full bg-gradient-to-r from-blue-900 to-blue-700 py-16 overflow-hidden" ref={containerRef}>
             <div className="container mx-auto px-4">
-                <h2 className="text-4xl font-bold text-slate-100 text-center mb-12">What Our Clients Say</h2>
+                <h2 className="text-4xl font-bold text-slate-100 text-center mb-12">What Our Investors Say</h2>
                 <div className="relative overflow-hidden">
                     <div className="absolute top-1/2 -translate-y-1/2 left-0 w-32 h-full bg-gradient-to-r from-blue-900 to-transparent z-10"></div>
                     <div className="absolute top-1/2 -translate-y-1/2 right-0 w-32 h-full bg-gradient-to-l from-blue-700 to-transparent z-10"></div>
