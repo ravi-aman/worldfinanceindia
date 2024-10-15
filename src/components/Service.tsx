@@ -29,7 +29,7 @@ function Service() {
         <div className="relative top-[-140px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-4">
             {services.map((service, index) => (
                 <Link key={index} href={service.link} passHref>
-                    <div className="cursor-pointer h-[200px] w-[350px] bg-slate-900 rounded-lg shadow-lg p-5 hover:scale-105 transition-transform duration-300 ease-in-out hover:bg-slate-800">
+                    <div className="cursor-pointer max-h-[200px] max-w-[350px] bg-slate-900 rounded-lg shadow-lg p-5 hover:scale-105 transition-transform duration-300 ease-in-out hover:bg-slate-800 ">
                         <div className="flex flex-col items-center text-center text-white">
                             <div className="text-4xl mb-4">{service.icon}</div>
                             <h3 className="text-xl font-semibold mb-2">{service.title}</h3>

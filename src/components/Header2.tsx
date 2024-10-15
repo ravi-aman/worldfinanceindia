@@ -83,7 +83,7 @@ export const Header2 = () => {
                 </div>
             </div>
             {/* lower header */}
-            <div className="px-10 py-5 bg-gray-100 m-0">
+            <div className="px-10 py-5 bg-slate-900 md:bg-gray-100 m-0">
                 <div className="w-full m-0">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center w-full justify-between">
@@ -93,7 +93,7 @@ export const Header2 = () => {
                             <Sheet>
                                 <SheetTrigger asChild>
                                     <span>
-                                        <FaBars className="h-5 w-5 md:hidden cursor-pointer" />
+                                        <FaBars className="h-5 w-5 md:hidden cursor-pointer text-white" />
                                     </span>
                                 </SheetTrigger>
                                 <SheetContent>
