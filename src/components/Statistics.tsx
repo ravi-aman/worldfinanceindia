@@ -40,7 +40,7 @@ export const Statistics = () => {
     }, []);
 
     return (
-        <section className="pt-40 pb-32 relative overflow-hidden w-full flex flex-row justify-between">
+        <section className="pt-40 pb-32 relative overflow-hidden w-full flex flex-col md:flex-row justify-center  md:justify-between">
             {/* Fixed Parallax Background */}
             <div
                 className="absolute w-full h-full top-0 left-0 bg-cover bg-center bg-no-repeat"
@@ -55,8 +55,8 @@ export const Statistics = () => {
             <div className="absolute w-full h-full top-0 left-0 bg-slate-900 opacity-70"></div>
 
             {/* Title Section */}
-            <div className="relative z-10 text-center w-[40%] flex flex-col justify-center items-center">
-                <h1 className="text-white text-3xl md:text-6xl font-bold">
+            <div className="relative z-10 text-center md:w-[40%] flex flex-col justify-center items-center m-auto p-5">
+                <h1 className="text-white text-4xl md:text-6xl font-bold">
                     Join us and Lets Start Learning Today and
                 </h1>
                 <button className="mt-8 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300">
@@ -65,7 +65,7 @@ export const Statistics = () => {
             </div>
 
             {/* Statistics Cards */}
-            <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-10 px-4">
+            <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-20 px-4">
                 {staticsData.map((stat, index) => (
                     <div
                         key={index}

@@ -34,7 +34,7 @@ const blogData = [
 ];
 function LatestBLog() {
     return (
-        <div>
+        <div className="mx-3">
             <div className="my-10">
                 {/* Title Section */}
                 <h2 className="max-w-7xl pl-4 my-20 text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
@@ -95,7 +95,7 @@ function LatestBLog() {
                                 placeholder="Email address"
                                 className="w-full md:w-100 pr-24 rounded-full bg-white text-black placeholder:text-gray-500"
                             />
-                            <Button className="absolute right-0 top-0 rounded-full px-4 bg-black text-white hover:bg-gray-800">
+                            <Button className="absolute right-0 top-2 rounded-full px-4 bg-black text-white hover:bg-gray-800">
                                 Subscribe
                             </Button>
                         </div>
