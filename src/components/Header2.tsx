@@ -88,7 +88,7 @@ export const Header2 = () => {
                     <div className="flex items-center justify-between">
                         <div className="flex items-center w-full justify-between">
                             <div className="flex items-center">
-                                <Image src="/Rk-white.png" alt="Saas Logo" className="mx-10" height={40} width={40} />
+                                <Image src="/Rk-white.png" alt="Saas Logo" className="mr-10" height={40} width={40} />
                             </div>
                             <Sheet>
                                 <SheetTrigger asChild>
