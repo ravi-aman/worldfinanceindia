@@ -10,7 +10,6 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import {
   ClerkProvider,
 } from "@clerk/nextjs";
-import { Header } from "@/components/Header";
 import Header2 from "@/components/Header2";
 import Footer from "@/components/Footer";
 
