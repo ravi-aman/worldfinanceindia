@@ -7,6 +7,7 @@ import LatestBLog from "@/components/ui/Blogs";
 import Benefits from "@/components/Benifits";
 import ContactForm from "@/components/ContactForm";
 import Testimonials from "@/components/testimonials";
+import Courses from "@/components/Courses";
 export default function Home() {
   return (
     <main className="flex  flex-col justify-center items-center ">
@@ -16,6 +17,7 @@ export default function Home() {
       {/* <RecomendedVideo/> */}
       <Features />
       <Benefits />
+      <Courses/>
       <CallToAction />
       <Statistics />
       <Testimonials />

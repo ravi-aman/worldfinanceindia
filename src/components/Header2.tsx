@@ -44,7 +44,6 @@ export const Header2 = () => {
             });
         }
     }, []);
-
     return (
         <header className="backdrop-blur-sm z-20 ">
             {/* upper header */}
