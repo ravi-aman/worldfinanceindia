@@ -1,10 +1,9 @@
-"use client"; // Enable client-side rendering
-
+"use client"; 
 import { useEffect, useRef } from "react";
 import ArrowRight from "@/assets/arrow-right.svg";
 import Logo from "@/assets/logosaas.png";
 import Image from "next/image";
-import MenuIcon from "@/assets/menu.svg"; // SVG for Menu Icon
+import MenuIcon from "@/assets/menu.svg";
 import Link from "next/link";
 import { gsap } from "gsap";
 import {
@@ -13,55 +12,44 @@ import {
   SheetContent,
   SheetHeader,
   SheetTitle,
-} from "@/components/ui/sheet"; // Import Sheet components
+} from "@/components/ui/sheet";
 
-// Import React Icons
-import { FaMapMarkerAlt, FaEnvelope, FaClock, FaPhone } from "react-icons/fa"; // Added FaPhone for phone icon
+import { FaMapMarkerAlt, FaEnvelope, FaClock, FaPhone } from "react-icons/fa";
 import { FaFacebookF, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { FaSearch, FaUserCircle } from "react-icons/fa"; // Added search and user icons
+import { FaSearch, FaUserCircle } from "react-icons/fa";
 
 export const Header = () => {
-  const buttonRef = useRef(null);
+  const buttonRef = useRef<HTMLButtonElement>(null); // Specify buttonRef as HTMLButtonElement
 
   useEffect(() => {
     const button = buttonRef.current;
     if (button) {
-      gsap.fromTo(
-        button,
-        { scale: 1 },
-        {
-          scale: 1.05,
-          duration: 0.2,
-          ease: "power1.inOut",
-          paused: true,
-          onHover: true,
-          overwrite: "auto",
-        }
-      );
+      const handleMouseEnter = () => gsap.to(button, { scale: 1.05, duration: 0.2 });
+      const handleMouseLeave = () => gsap.to(button, { scale: 1, duration: 0.2 });
 
-      button.addEventListener("mouseenter", () => {
-        gsap.to(button, { scale: 1.05, duration: 0.2 });
-      });
+      button.addEventListener("mouseenter", handleMouseEnter);
+      button.addEventListener("mouseleave", handleMouseLeave);
 
-      button.addEventListener("mouseleave", () => {
-        gsap.to(button, { scale: 1, duration: 0.2 });
-      });
+      return () => {
+        button.removeEventListener("mouseenter", handleMouseEnter);
+        button.removeEventListener("mouseleave", handleMouseLeave);
+      };
     }
   }, []);
 
   return (
-    <header className="sticky top-0 backdrop-blur-sm z-20 ">
+    <header className="sticky top-0 backdrop-blur-sm z-20">
       <div className="flex justify-between items-center bg-slate-900 text-white text-sm gap-6 px-10">
-        <div className="flex items-center gap-5"> {/* Increased gap between items */}
-          <div className="flex items-center gap-2"> {/* Flex container for the location */}
-            <FaMapMarkerAlt className="text-white" /> {/* Icon color for better visibility */}
+        <div className="flex items-center gap-5">
+          <div className="flex items-center gap-2">
+            <FaMapMarkerAlt className="text-white" />
             <p className="text-white/60 hidden md:block">
               Mohan Garden, Uttam Nagar, New Delhi, 110059
             </p>
           </div>
-          <div className="flex items-center gap-2"> {/* Flex container for the email */}
-            <FaEnvelope className="text-white" /> {/* Icon color for better visibility */}
-            <p className="text-white">tiwariravikant04@gmail.com</p> {/* Added white color to the email */}
+          <div className="flex items-center gap-2">
+            <FaEnvelope className="text-white" />
+            <p className="text-white">tiwariravikant04@gmail.com</p>
           </div>
         </div>
 
@@ -71,7 +59,7 @@ export const Header = () => {
 
           <div className="icon flex gap-3 text-white bg-blue-500 px-10 py-3 justify-between gap-5">
             <a href="https://www.facebook.com/ravikant.tiwari.547727" target="_blank">
-              <FaFacebookF className=" w-50" />
+              <FaFacebookF className="w-50" />
             </a>
             <a href="https://www.instagram.com/ravikanttiwari04/" target="_blank">
               <FaInstagram />
@@ -96,7 +84,7 @@ export const Header = () => {
               <Sheet>
                 <SheetTrigger asChild>
                   <span>
-                    <MenuIcon className="h-5 w-5 md:hidden cursor-pointer" /> {/* Mobile Menu Icon */}
+                    <MenuIcon className="h-5 w-5 md:hidden cursor-pointer" />
                   </span>
                 </SheetTrigger>
                 <SheetContent>
@@ -154,12 +142,11 @@ export const Header = () => {
               </nav>
             </div>
 
-            {/* New Right Section */}
             <div className="flex gap-6 items-center">
               <div className="flex flex-col items-end">
                 <div className="flex items-center gap-3">
                   <FaPhone className="h-10 w-10 text-white bg-blue-500 p-2 rounded-full" />
-                  <div className="flex flex-col border-r border-gray-300 pr-3"> {/* Left border with padding */}
+                  <div className="flex flex-col border-r border-gray-300 pr-3">
                     <p className="text-sm text-gray-500">Call us anytime</p>
                     <p className="text-xl font-bold">+91 8744883594</p>
                   </div>
